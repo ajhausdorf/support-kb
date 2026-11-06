@@ -20,11 +20,12 @@ signature: Andrew Hausdorf
   };
 </script>
 
-[#4471](/kb/incidents/4471) says one issue, one fix queued. Its reports show three problems.
-The queued parser fix closes the biggest one. The other two stay broken after it ships.
+[#4471](/kb/incidents/4471) said one issue, one fix queued. Its reports show three problems.
+Engineering closed #4471 on 5 October: the parser fix shipped and the booking-v3 form was
+retired. The third problem is still open.
 
 <Callout kind="warn">
-Not one issue. Each problem now has its own ticket. Do not close them with #4471.
+`parser` fixed · `hint` won't fix, form retired · `shift` open, nobody has looked yet.
 </Callout>
 
 ## What the reports show
@@ -37,13 +38,13 @@ follow the desk as new reports come in.
 ## The three problems
 
 **`parser`: day and month swapped.** The shared parser reads every date month first. Our tenants
-write the day first, so 7 April comes out as 4 July. This is the bug #4471 describes, and the
-fix queued for it.
+write the day first, so 7 April comes out as 4 July. This is the bug #4471 describes. Fixed:
+`fix(dates): parse dd/mm for eu locales`.
 
 **`hint`: the booking-v3 form asks for the wrong order.** booking-v3 prints `MM/DD/YYYY` under its
 date field. People type month first, as told, and the form reads the date day first. The dates
-come out swapped too, but the parser fix does not touch them: the form hint has to change.
-Only reports sent through the booking-v3 form have this cause.
+come out swapped too, but the parser fix does not touch them: the form hint had to change.
+Only reports sent through the booking-v3 form have this cause. Won't fix: booking-v3 is retired.
 
 **`shift`: a date moved by one day.** Some reports are not a swap at all. The date is one day
 early or late: "Tuesday 6 October showed as Monday", "Client in Lisbon got Tuesday. Client in
