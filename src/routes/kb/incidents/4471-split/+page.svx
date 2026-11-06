@@ -4,7 +4,7 @@ title: '#4471 is three problems'
 owner: support desk
 status: open
 reviewed: 2026-11-06
-signature: Andrew Hausdorf
+signature: v1.eyJzdWIiOiI5NDQ0IiwiYXVkIjoiY2hhbGxlbmdlOndoYXQtaXQtc2hvd3MiLCJpYXQiOjE3OTM5ODM5NTUsImV4cCI6MTc5NDA3MDM1NX0.cN5pFC7kvSr0si0Ulf5HECGsvYcz4pl-AUYFfwhV_DE
 ---
 
 <script>
